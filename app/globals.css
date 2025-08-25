@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Optional: Your own global styles below */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+}
