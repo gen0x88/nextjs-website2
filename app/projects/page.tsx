@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { MobileNavbar, Navbar } from "@/components/Navbar";
+import Link from "next/link";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,9 +17,9 @@ export default function Home() {
           className="flex items-center justify-between p-6 lg:px-8"
         >
           <div className="flex lg:flex-1">
-            <a href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-            </a>
+            <Link href="/" className="-m-1.5 p-1.5">
+              <span className="text-sm/6 font-semibold text-white">Ethan's Website</span>
+            </Link>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -43,10 +44,9 @@ export default function Home() {
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only"></span>
-                
-              </a>
+              <Link href="/" className="-m-1.5 p-1.5">
+                <span className="sr-only">Ethan's Websites</span>
+              </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}

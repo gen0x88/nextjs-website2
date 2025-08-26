@@ -4,12 +4,7 @@ import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { MobileNavbar, Navbar } from "@/components/Navbar";
-
-const navigation = [
-  { name: "Projects", href: "#" },
-  { name: "About me", href: "#" },
-  { name: "Contact", href: "#" },
-];
+import Link from "next/link";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,9 +17,9 @@ export default function Home() {
           className="flex items-center justify-between p-6 lg:px-8"
         >
           <div className="flex lg:flex-1">
-            <a href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-            </a>
+            <Link href="/" className="-m-1.5 p-1.5">
+              <span className="text-sm/6 font-semibold text-white">Ethan's Website</span>
+            </Link>
           </div>
           <div className="flex lg:hidden">
             <button
