@@ -3,17 +3,29 @@
 import { useState } from "react";
 import Link from "next/link";
 import CustomBackground from "@/components/background";
+import SplitText from "./../../components/SplitText";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
-
   return (
     <CustomBackground>
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
         <div className="text-center">
-          <h1 className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
-            My Projects
-          </h1>
+          <SplitText
+            text="My Projects"
+            className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl"
+            delay={100}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+            onLetterAnimationComplete={() => console.log("Animation Complete")}
+          />
           <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
             Check out my projects, learn more about me, and get in touch!
           </p>
@@ -29,6 +41,17 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        <ScrollReveal
+          baseOpacity={0}
+          enableBlur={true}
+          baseRotation={5}
+          blurStrength={10}
+        >
+          <div className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
+            alot of textalot of textalot of textalot of textalot of textalot of
+            textalot of textalot of textalot of textalot of textalot of text
+          </div>
+        </ScrollReveal>
       </div>
     </CustomBackground>
   );
