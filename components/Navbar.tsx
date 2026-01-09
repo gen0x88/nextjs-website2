@@ -1,19 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import getConfig from "next/config";
-
-// const { publicRuntimeConfig } = getConfig();
 
 const navigation = [
   { name: "Projects", href: "/projects" },
   { name: "About me", href: "/about" },
   { name: "Contact", href: "/contact" },
+  { name: "Train Planner", href: "/trains" },
 ];
 
 export function Navbar() {
-  // const basePath = publicRuntimeConfig?.basePath || "";
 
   return navigation.map((item) => (
     <Link

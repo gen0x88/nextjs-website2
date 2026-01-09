@@ -1,7 +1,7 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  // output: 'export',
   // basePath: process.env.PAGES_BASE_PATH,
   basePath: "/nextjs-website2",
   assetPrefix: "/nextjs-website2/",
