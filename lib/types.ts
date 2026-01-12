@@ -83,6 +83,7 @@ export interface StopParent {
 export interface StopProperties {
   WheelchairAccess?: "true" | "false";
   downloads?: Download[];
+  NumberOfCars?: string;
 }
 
 export interface Download {
