@@ -17,16 +17,9 @@ import CustomBackground from "@/components/background";
 import { Select } from "@headlessui/react";
 import { ArrowRightIcon, Button, ButtonGroup } from "flowbite-react";
 import React, { useEffect, useState } from "react";
-import { GTFSType } from "../api/gtfs/sydneytrains/route";
 import { Journey, Leg, ResponseMessage, TripResponse } from "@/lib/types";
 import { STOPS } from "@/data/stops";
-// const STOPS = [
-//   { id: 2220361, name: "Hurstville" },
-//   { id: 2220351, name: "Allawah" },
-//   { id: 250020, name: "Wollongong" },
-//   { id: 214810, name: "Blacktown" },
-//   { id: 2150411, name: "Parramatta" },
-// ];
+
 const disassembledNames = [
   { id: 0, name: "T1", color: "#FBBF24" }, // yellow
   { id: 1, name: "T2", color: "#87CEEB" }, // light blue
