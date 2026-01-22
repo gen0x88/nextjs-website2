@@ -16,16 +16,13 @@ export default function Home() {
           <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
             Check out my projects, learn more about me, and get in touch!
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Link
-              href="#"
-              className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-            >
-              Scroll Down
-            </Link>
-            <Link href="/about" className="text-sm/6 font-semibold text-white">
-              About me <span aria-hidden="true">→</span>
-            </Link>
+          <div className="mt-10 flex items-center justify-center">
+            <p className="mt-8 text-lg font-medium text-pretty text-white sm:text-xl/8">
+              Hi there my name is Ethan and I am a software developer. I have experience in
+              building web applications, mobile applications, and games. I am passionate about
+              learning new technologies and improving my skills. Feel free to explore my website
+              to learn more about me and my projects!
+            </p>
           </div>
         </div>
       </div>

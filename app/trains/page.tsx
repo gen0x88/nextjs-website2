@@ -48,7 +48,7 @@ export default function TrainsPage() {
   });
 
   const getStopId = async (stopName: string) => {
-    const res = await fetch("/api/stop?stopId=" + stopName, {
+    const res = await fetch(`/nextjs-website2/api/stop?stopId=` + stopName, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

@@ -6,7 +6,7 @@ const navigation = [
   { name: "Projects", href: "/projects" },
   { name: "About me", href: "/about" },
   { name: "Contact", href: "/contact" },
-  { name: "Train Planner", href: "/trains" },
+  // { name: "Train Planner", href: "/trains" },
 ];
 
 export function Navbar() {
