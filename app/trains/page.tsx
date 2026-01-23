@@ -47,50 +47,50 @@ export default function TrainsPage() {
     version: "",
   });
 
-  const getStopId = async (stopName: string) => {
-    const res = await fetch(`/nextjs-website2/api/stop?stopId=` + stopName, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+  // const getStopId = async (stopName: string) => {
+  //   const res = await fetch(`/nextjs-website2/api/stop?stopId=` + stopName, {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   });
 
-    const data = await res.json();
-    return data.locations[0]?.properties.stopId;
-  };
+  //   const data = await res.json();
+  //   return data.locations[0]?.properties.stopId;
+  // };
 
   const searchTrips = async () => {
-    if (from === 0 && to === 0) {
-      alert("Please select both From and To stations.");
-      return;
-    } else if (!from) {
-      alert(`Invalid Station selected for From`);
-      return;
-    } else if (!to) {
-      alert(`Invalid Station selected for To`);
-      return;
-    } else if (from === to) {
-      alert("From and To stations cannot be the same.");
-      return;
-    }
-    if (loading) return;
-    setLoading(true);
-    const fromStopId = await getStopId(from.toString());
-    const toStopId = await getStopId(to.toString());
-    console.log("From Stop ID:", fromStopId);
-    console.log("To Stop ID:", toStopId);
-    const res = await fetch(
-      `/api/search?fromId=${fromStopId}&toId=${toStopId}`,
-      {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
-      }
-    );
+  //   if (from === 0 && to === 0) {
+  //     alert("Please select both From and To stations.");
+  //     return;
+  //   } else if (!from) {
+  //     alert(`Invalid Station selected for From`);
+  //     return;
+  //   } else if (!to) {
+  //     alert(`Invalid Station selected for To`);
+  //     return;
+  //   } else if (from === to) {
+  //     alert("From and To stations cannot be the same.");
+  //     return;
+  //   }
+  //   if (loading) return;
+  //   setLoading(true);
+  //   const fromStopId = await getStopId(from.toString());
+  //   const toStopId = await getStopId(to.toString());
+  //   console.log("From Stop ID:", fromStopId);
+  //   console.log("To Stop ID:", toStopId);
+  //   const res = await fetch(
+  //     `/api/search?fromId=${fromStopId}&toId=${toStopId}`,
+  //     {
+  //       method: "GET",
+  //       headers: { "Content-Type": "application/json" },
+  //     }
+  //   );
 
-    const journeys = await res.json();
-    console.log("Journeys:", journeys);
-    setResults(journeys);
-    setLoading(false);
+    // const journeys = await res.json();
+    // console.log("Journeys:", journeys);
+    // setResults(journeys);
+    // setLoading(false);
   };
 
   return (
