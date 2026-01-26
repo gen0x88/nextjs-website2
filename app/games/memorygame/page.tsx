@@ -194,7 +194,7 @@ export default function MemoryGame() {
           <div className="mt-16 space-y-8">
             {/* Makes the grid display 2 rows of 4 when 2x4 and 2 rows of 6 when 2x6 */}
             <div
-              className={`grid gap-4 w-full mx-auto place-items-center grid-cols-${Math.floor(cards.length / 2)}`}
+              className={`grid gap-4 w-full mx-auto place-items-center grid-cols-4`}
             >
               {/* When 2 cards are flipped, do not allow the player to flip more cards */}
               {cards.map((card, index) => {
